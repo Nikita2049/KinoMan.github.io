@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Киносайт</title>
+	<link rel="stylesheet" href="css/style-main.css" type="text/css">
+</head>
+<body>
+	<header class="header">
+		<div class="nav">
+			<img src="image/logo.svg" alt="KinoMan" class="logo">
+			<ul class="menu">
+				<li>
+					<a href="movies.html">Фильмы</a>
+				</li>
+				<li>
+					<a href="serials.html">Сериалы</a>
+				</li>
+				<li>
+					<a href="catalog.html">Каталог</a>
+				</li>
+				<li>
+					<a href="podborka.html">Подборка</a>
+				</li>	
+			</ul>
+			<form class="search">
+				<input type="text" placeholder="Введите фильм или сериал" name="search">
+				<button type="sumbit">Поиск</button>
+			</form>
+		</div>
+	</header>
+	
+	<section class="main">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="image/tenet.jpg" style="width: 100%" alt="Tenet">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="image/BladeRunner.jpg" style="width: 100%" alt="Blade Runner">
+				<div class="text">Caption Two</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="image/thief.jpg" style="width: 100%" alt="Honest Thief">
+				<div class="text">Caption Three</div>
+			</div>
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align: center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+
+		<!-- Movie feed -->
+		<div class="movies">
+			<header>
+				<h1>Новинки</h1>
+			</header>
+			<div class="item">
+				<img src="image/ava.jpg" alt="Agent Ava">
+				<h3>Агент Ава</h3>
+			</div>
+
+			<div class="item">
+				<img src="image/GL.jpg" alt="Greenland">
+				<h3>Гренландия</h3>
+			</div>
+
+			<div class="item">
+				<img src="image/mulan.jpg" alt="">
+				<h3>Мулан</h3>				
+			</div>
+		</div>
+	</section>
+</body>
+</html>
