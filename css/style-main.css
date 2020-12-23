@@ -1,8 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: url('../image/fon.jpg') no-repeat center center fixed;
-	background: cover; 
+	background: url('../image/fon.jpg') no-repeat;
+    background-size: cover;
 }
 
 .header {
@@ -43,27 +43,20 @@ li {
 }
 
 .search {
-	margin-left: auto;
+	margin-left: 100px;
 }
 
 input {
-	width: 415px;
+	width: 300px;
 	height: 35px;
 	border-radius: 5px;
 }
 
 button {
-	width: 130px;
+	width: 100px;
 	height: 40px;
 	border-radius: 5px;
 }
-
-/*.main {
-	background: url('../image/fon.jpg') no-repeat center center fixed;
-	background: cover; 
-}*/
-
-* {box-sizing: border-box}
 
 /*Slideshow container*/
 .slideshow-container {
@@ -171,7 +164,6 @@ button {
   color: #fff;
   font-size: 26px;
   text-shadow: 2px 2px 1px #000;
-  background-color: red;
   margin-left: 100px;
 }
 
@@ -179,7 +171,6 @@ h1 {
 	color: #fff;
 	text-shadow: 2px 2px 1px #000;
 	font-size: 36px;
-	/*background-color: blue;*/
 }
 
 .podborka {
@@ -215,4 +206,101 @@ h1 {
 	width: 800px;
 	height: 500px;
 	margin-left: 500px;
+}
+
+.registration {
+	color: #fff;
+	font-family: Verdana;
+	font-size: 20px;
+	margin-left: 350px;
+}
+
+.registration a {
+	text-decoration: none;
+}
+
+.registration a.singin:hover {
+	color: #7CFF01;
+}
+
+.registration a.singup:hover {
+	color: #FF0000;
+}
+
+.enter {
+	color: #fff;
+}
+
+.form-control {
+    width: 300px;
+    font-size: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 5px;
+}
+
+.container {
+  padding: 16px;
+}
+
+input[type=text], input[type=password] {
+  width: 400px;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #fff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: blue;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  margin-left: 10px; 
+  border: none;
+  cursor: pointer;
+  width: 400px;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+label {
+	color: #fff;
+	font-size: 20px;
+	text-shadow: 2px 2px 1px #000;
+}
+
+.container_signin {
+	font-size: 25px;
+	margin-left: 100px;
+}
+
+p {
+	color: #fff;
+	text-shadow: 2px 2px 1px #000;
+}
+
+.back_wall {
+	background: url('../image/logo/wallpaper.jpg') no-repeat;
+    background-size: cover;
 }
