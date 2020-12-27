@@ -1,24 +1,30 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+const form = document.forms[0];
 
-//Next/previous controls
-function plusSlides(n) {
-	showSlides(slideIndex = n);
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const values = [...new FormData(form).values()];
+    console.log(values);
+
+    if (!checkEmail(values[0])) return showMessage('error', 'Неврная почта');
+    if (!checkIsNotNull(values[1])) return showMessage('error', 'Неврный пароль');
+
+    showMessage('success', 'Регистрация прошла успешно');
+});
+
+function checkIsNotNull(value) {
+    return value !== '';
 }
 
-function showSlides(n) {
-	var i;
-	var slides = document.getElementByClassName('mySlides');
-	var dots = document.getElementsByClassName("dot");
-  	if (n > slides.length) {slideIndex = 1}
-  	if (n < 1) {slideIndex = slides.length}
-  	for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  	}
-  	for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  	}
-  	slides[slideIndex-1].style.display = "block";
-  	dots[slideIndex-1].className += " active";
+function checkEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
 
+function showMessage(type, text) {
+    Swal.fire({
+        text: text,
+        icon: type,
+        showConfirmButton: false
+    });
+}
